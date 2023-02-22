@@ -6,8 +6,15 @@
 
 I did the following steps to install AWS CLI.
 
-I installed the AWS CLI via command in **Command Prompt**:
+I installed the AWS CLI by running the appropriate MSI installer.
 
+The reason I used the MSI installer was because my OS(windows 7) is compatible with AWS CLI Version 1 and there is no option to execute via the command prompt.
+
+I followed the instructions on the [AWS CLI Install Documentation Page](https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html)
 ```
-msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+C:\Users\Shujath>aws --version
 ```
+**Note to insert image**
+
+I proof checked the 
+
