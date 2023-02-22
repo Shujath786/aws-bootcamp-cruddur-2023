@@ -15,6 +15,7 @@ I followed the instructions on the [AWS CLI Install Documentation Page](https://
 C:\Users\Shujath>aws --version
 ```
 **Note to insert image**
+![AWS CLI install](/assets/AWS CLI.jpg)
 
 I proof checked the AWS CLI install:
 
