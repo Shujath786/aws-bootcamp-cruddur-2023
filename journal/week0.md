@@ -16,5 +16,7 @@ C:\Users\Shujath>aws --version
 ```
 **Note to insert image**
 
-I proof checked the 
+I proof checked the AWS CLI install:
+
+**Note to insert image**
 
