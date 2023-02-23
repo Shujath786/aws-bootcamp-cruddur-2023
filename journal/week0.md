@@ -21,4 +21,12 @@ I proof checked the AWS CLI install:
 
 ![proof of AWS CLI](assets/proof%20of%20working%20aws%20CLI.JPG)
 
+### Create Billing Alarm
+
+
+
+### Create a Budget
+
+![Image of Budget I created](/journal/assets/create-budget.JPG)
+
 ## Homework Challenges
