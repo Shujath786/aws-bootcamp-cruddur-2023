@@ -22,3 +22,4 @@ I proof checked the AWS CLI install:
 
 **Note to insert image**
 
+## Homework Challenges
