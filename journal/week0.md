@@ -38,4 +38,9 @@ Here is my Logical Architectural Diagram for Cruddur app
 Below is the Lucid chart link -
 [Lucid chart share link](https://lucid.app/lucidchart/7f173427-3486-4a08-affd-d3dca797cc17/edit?viewport_loc=-111%2C-181%2C2219%2C1119%2C0_0&invitationId=inv_9791d19f-21ab-47b6-aad3-db72a86a2616)
 
+### Reference files in my codebase
+[main/aws/json/budget.json](https://github.com/Shujath786/aws_bootcamp_cruddur_2023/blob/main/aws/json/budget.json)
+
+[main/aws/json/alarm-config.json](https://github.com/Shujath786/aws_bootcamp_cruddur_2023/blob/main/aws/json/alarm-config.json)
+
 ## Homework Challenges
