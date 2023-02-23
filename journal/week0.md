@@ -2,7 +2,7 @@
 
 ## Required Homework/Tasks
 
-### Install AWS CLI
+### Install and verify AWS CLI
 
 I did the following steps to install AWS CLI.
 
@@ -19,6 +19,6 @@ C:\Users\Shujath>aws --version
 
 I proof checked the AWS CLI install:
 
-**Note to insert image**
+![proof of AWS CLI](assets/proof%20of%20working%20aws%20CLI.JPG)
 
 ## Homework Challenges
