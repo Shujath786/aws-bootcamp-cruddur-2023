@@ -29,4 +29,13 @@ I proof checked the AWS CLI install:
 
 ![Image of Budget I created](/journal/assets/create-budget.JPG)
 
+### Recreate Logical Architectural Design
+
+Here is my Logical Architectural Diagram for Cruddur app
+
+![My Logical Architectural Diagram](/journal/assets/Cruddur%20Logical%20Diagram.jpeg)
+
+Below is the Lucid chart link -
+[Lucid chart share link](https://lucid.app/lucidchart/7f173427-3486-4a08-affd-d3dca797cc17/edit?viewport_loc=-111%2C-181%2C2219%2C1119%2C0_0&invitationId=inv_9791d19f-21ab-47b6-aad3-db72a86a2616)
+
 ## Homework Challenges
