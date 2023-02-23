@@ -23,7 +23,7 @@ I proof checked the AWS CLI install:
 
 ### Create Billing Alarm
 
-
+![Image of Billing Alarm I created](/journal/assets/Billing%20Alarm.JPG)
 
 ### Create a Budget
 
