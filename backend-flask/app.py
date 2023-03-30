@@ -13,6 +13,9 @@ from services.message_groups import *
 from services.messages import *
 from services.create_message import *
 from services.show_activity import *
+from lib.cognito_token_verification import CognitoTokenVerification
+
+
 
 #Honeycomb
 from opentelemetry import trace
@@ -63,6 +66,9 @@ trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)
 
 app = Flask(__name__)
+
+cognito_token_verification = CognitoTokenVerification(user_pool_id, user_pool_client_id, region)
+
 #X-RAY
 XRayMiddleware(app, xray_recorder)
 #Honeycomb
@@ -150,8 +156,11 @@ def data_create_message():
 
 @app.route("/api/activities/home", methods=['GET'])
 @xray_recorder.capture('activities_home')
+@aws_auth.authentication_required
 def data_home():
    data = HomeActivities.run()
+   claims = aws_auth.claims
+   app.logger.debug(claims)
    return data, 200
 
 
