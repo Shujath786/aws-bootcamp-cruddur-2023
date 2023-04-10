@@ -1,7 +1,26 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-export CONNECTION_URL="postgresql://postgres:password@localhost:5432/cruddur"
-gp env CONNECTION_URL="postgresql://postgres:password@localhost:5432/cruddur"
 
-export PROD_CONNECTION_URL="postgresql://mohroot:huEEBootCamp33z2Qvl383@cruddur-db-instance.cjyisggi4lhf.us-east-1.rds.amazonaws.com:5432/cruddur"
-gp env PROD_CONNECTION_URL="postgresql://mohroot:huEEBootCamp33z2Qvl383@cruddur-db-instance.cjyisggi4lhf.us-east-1.rds.amazonaws.com:5432/cruddur"
+-- forcefully drop our tables if they already exist
+DROP TABLE IF EXISTS public.users cascade;
+DROP TABLE IF EXISTS public.activities;
+
+CREATE TABLE public.users (
+  uuid UUID default uuid_generate_v4() primary key,
+  display_name text,
+  handle text,
+  cognito_user_id text,
+  created_at timestamp default current_timestamp NOT NULL
+);
+
+CREATE TABLE public.activities (
+  uuid UUID default uuid_generate_v4() primary key,
+  user_uuid UUID REFERENCES public.users(uuid) NOT NULL,
+  message text NOT NULL,
+  replies_count integer default 0,
+  reposts_count integer default 0,
+  likes_count integer default 0,
+  reply_to_activity_uuid integer,
+  expires_at timestamp,
+  created_at timestamp default current_timestamp NOT NULL
+);
