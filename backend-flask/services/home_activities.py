@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta, timezone
 from opentelemetry import trace
-
+from lib.db import pool, query_wrap_array
 tracer = trace.get_tracer("home.activities")
 
 class HomeActivities:
@@ -62,6 +62,15 @@ class HomeActivities:
           'replies': []
         }
         results.insert(0,extra_crud)
+        sql = """
 
-      span.set_attribute("app.result_length", len(results))
-      return results
+        """
+        with pool.connection() as conn:
+          with conn.cursor() as cur:
+           cur.execute(sql)
+          # this will return a tuple
+          # the first field being the data
+          json = cur.fetchone()
+        return json[0]
+        span.set_attribute("app.result_length", len(results))
+        return results
